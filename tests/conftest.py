@@ -42,16 +42,16 @@ def get_webdriver(get_chrome_options, get_edge_options, browser):
     browser = browser
     if browser == 'chrome':
         options = get_chrome_options
-        #s = Service("E:\\current\\selenium\\pythonProject\\chromedriver.exe")
-        #driver = webdriver.Chrome(service=s, options=options)
-        driver = webdriver.Remote('http://127.0.0.1:4444/wd/hub', options=options)
+        s = Service("E:\\current\\selenium\\sample_prj\\chromedriver.exe")
+        driver = webdriver.Chrome(service=s, options=options)
+        #driver = webdriver.Remote('http://127.0.0.1:4444/wd/hub', options=options)
     elif browser == 'edge':
         options = get_edge_options
-        s = Service("E:\\current\\selenium\\pythonProject\\msedgedriver.exe")
+        s = Service("E:\\current\\selenium\\sample_prj\\msedgedriver.exe")
         driver = webdriver.Edge(service=s, options=options)
     else:
         options = get_chrome_options
-        s = Service("E:\\current\\selenium\\pythonProject\\chromedriver.exe")
+        s = Service("E:\\current\\selenium\\sample_prj\\chromedriver.exe")
         driver = webdriver.Chrome(service=s, options=options)
     return driver
 
