@@ -1,8 +1,9 @@
 from base.seleniumbase import SeleniumBase
 from selenium.webdriver.remote.webelement import WebElement
-"""pytest -s -v --browser edge
-    pytest -s -v --browser chrome
-    pytest -s -v >myoutput.log"""
+"""
+    Функции для проверки шрифтов на главной странице,
+    используются в test_site.py
+"""
 
 
 class MainPage(SeleniumBase):

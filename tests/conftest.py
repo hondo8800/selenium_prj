@@ -6,6 +6,9 @@ from selenium.webdriver.chrome.service import Service
 
 from selenium.webdriver.edge.options import Options as edge_options
 from selenium.webdriver.edge.service import Service
+"""
+    Файл с настройками браузеров, выбора драйвера и т.д.
+"""
 
 
 def pytest_addoption(parser):
@@ -14,6 +17,10 @@ def pytest_addoption(parser):
 
 @pytest.fixture
 def get_chrome_options():
+    """
+        List of Chromium Command Line Switches:
+        https://peter.sh/experiments/chromium-command-line-switches/
+    """
     options = chrome_options()
     options.add_argument('chrome')
     options.add_argument('--headless')
@@ -39,12 +46,20 @@ def get_edge_options():
 
 @pytest.fixture
 def get_webdriver(get_chrome_options, get_edge_options, browser):
+    """browser select"""
     browser = browser
     if browser == 'chrome':
         options = get_chrome_options
+
+        """Use this line if you run tests locally:"""
         s = Service("E:\\current\\selenium\\sample_prj\\chromedriver.exe")
         driver = webdriver.Chrome(service=s, options=options)
-        #driver = webdriver.Remote('http://127.0.0.1:4444/wd/hub', options=options)
+
+        """
+        Use this line if you run tests in Docker:
+        
+        driver = webdriver.Remote('http://127.0.0.1:4444/wd/hub', options=options)
+        """
     elif browser == 'edge':
         options = get_edge_options
         s = Service("E:\\current\\selenium\\sample_prj\\msedgedriver.exe")

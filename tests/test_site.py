@@ -1,13 +1,18 @@
-import time
-
 import pytest
-
-from pom.login import Login
 from pom.main_page import MainPage
+"""
+    В этом файле содержится бизнес логика
+
+    Команды в терминале:
+    pytest -s -v --browser edge
+    pytest -s -v --browser chrome
+    pytest -s -v >myoutput.log
+"""
 
 
 @pytest.mark.usefixtures('setup')
 class TestSite:
+    """Tests:"""
 
     def test_fonts(self):
         """Check fonts"""

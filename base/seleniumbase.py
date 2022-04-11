@@ -4,6 +4,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.remote.webelement import WebElement
 from typing import List
 from selenium.webdriver.common.action_chains import ActionChains
+"""
+    Преобразование дефолтных функций селениума для более удобной работы
+    Используются в директроии POM
+"""
 
 
 class SeleniumBase:

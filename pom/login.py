@@ -1,11 +1,13 @@
 from base.seleniumbase import SeleniumBase
 from selenium.webdriver.remote.webelement import WebElement
-from typing import List
-from base.utils import Utils
+"""
+    Функции для проверки формы входа в личный кабинет,
+    используются в test_site.py
+"""
 
 
 class Login(SeleniumBase):
-    """Переход на страницу Личный кабинет и логин"""
+
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
