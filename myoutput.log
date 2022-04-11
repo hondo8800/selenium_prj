@@ -1,0 +1,10 @@
+============================= test session starts =============================
+platform win32 -- Python 3.9.5, pytest-7.1.1, pluggy-1.0.0 -- e:\current\selenium\pythonproject\venv\scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\current\selenium\pythonProject
+plugins: allure-pytest-2.9.45
+collecting ... collected 1 item
+
+Check fonts PASSED
+
+============================== 1 passed in 7.40s ==============================
